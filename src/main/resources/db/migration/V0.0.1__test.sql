@@ -1,0 +1,10 @@
+CREATE TABLE `test` (
+    `type` tinyint NOT NULL COMMENT '타입',
+    `reg_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `modify_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+insert into test values(0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+insert into test values(2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+insert into test values(3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
